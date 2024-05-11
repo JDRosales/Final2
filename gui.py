@@ -45,7 +45,7 @@ class Gui:
         self.button_save.grid(row=7, column=0, columnspan=2, pady=10)
         self.status_message.grid(row=8, column=0, columnspan=2)
 
-    def schedule_update_score_entries(self):
+    def schedule_update_score_entries(self,*args):
         if self.validation_delay is not None:
             self.window.after_cancel(self.validation_delay)
         self.validation_delay = self.window.after(500, self.update_scores)
